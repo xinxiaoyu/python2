@@ -6,10 +6,10 @@ from datetime import datetime, date, timedelta
 import mysql.connector
 import  xlsxwriter
 
-cnx = mysql.connector.connect(user='root', database='lang',password='123',host='192.168.13.203')
+cnx = mysql.connector.connect(user='a', database='a',password='a',host='a')
 cursor = cnx.cursor()
 
-query = ("select a,b,c from lang2")
+query = ("select a,b,c from a")
 cursor.execute(query)
 
 workbook = xlsxwriter.Workbook('demo.xlsx')
