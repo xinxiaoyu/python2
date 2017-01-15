@@ -26,7 +26,7 @@ msg['From'] = _format_addr(u'呵呵 <%s>' % from_addr)
 msg['To'] = _format_addr(u'呵呵 <%s>' % to_addr)
 msg['Subject'] = Header(u'报表', 'utf-8').encode()
 
-with open('C:\Users\langyaofeng\PycharmProjects\python-bb\demo.xlsx', 'rb') as f:
+with open('C:\Users\a\PycharmProjects\python-bb\demo.xlsx', 'rb') as f:
     # 设置附件的MIME和文件名，这里是png类型:
     mime = MIMEMultipart('mixed', 'xlsx', filename='demo.xlsx')
     # 加上必要的头信息:
