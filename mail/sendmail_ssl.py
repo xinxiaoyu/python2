@@ -19,7 +19,7 @@ def _format_addr(s):
 from_addr = 'mail@qq.com'
 password = 'passwd'
 to_addr =['mail@og.com']
-cc = ['aa@chinazyjr.com','aa@gmail.com','aa@163.com']
+cc = ['a.com','aa@gmail.com','aa@163.com']
 smtp_server = 'smtp.qq.com'
 to_addrs = [to_addr] + cc
 msg = MIMEMultipart()
@@ -30,7 +30,7 @@ msg['Subject'] = Header(u'呵呵', 'utf-8').encode()
 
 yesterday = (date.today() - timedelta(1)).strftime('%Y%m%d')
 hkname = 'FXD_' + yesterday + '_REPAYMENT.xlsx'
-hkpath = 'C:\Users\langyaofeng\PycharmProjects\python-bb\\'
+hkpath = 'C:\Usersa\PycharmProjects\python-bb\\'
 with open(hkpath + hkname, 'rb') as f:
     # 设置附件的MIME和文件名，这里是png类型:
     mime = MIMEMultipart('mixed', 'xlsx', filename=hkname)
