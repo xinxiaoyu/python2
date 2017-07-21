@@ -45,3 +45,6 @@ bar = Bar("城市访问明细", "省份与访问量")
 bar.add("城市访问量", x, y)
 bar.show_config()
 bar.render()
+
+shell:
+    awk -F\" '{print $1,$4}' /newdisk/root/access_json_log |awk '{print $1,$3}' | awk '{s[$2] += $1}END{ for(i in s){  print i, s[i]} }'
