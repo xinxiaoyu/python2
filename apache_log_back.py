@@ -1,4 +1,4 @@
-#!/usr/bin/python env
+#!/usr/bin/env pytho
 #python2.7
 
 import os
