@@ -2,8 +2,11 @@
 
 import re
 from pyecharts import Pie
+from datetime import date, timedelta
 
-f = open(r'/newdisk/root/access_json.log1','r')
+yesterday = (date.today() - timedelta(1)).strftime('%Y%m%d')
+
+f = open(r'/root/access_json.log1','r')
 n = []
 
 for i in f:
@@ -22,4 +25,4 @@ for item in p:
 pie = Pie("http_status")
 pie.add("", x, y, is_label_show=True)
 pie.show_config()
-pie.render()
+pie.render('/var/www/html/' + yesterday + '.html')
